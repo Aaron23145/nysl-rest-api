@@ -3,9 +3,12 @@
   "author": "Aarón Arriero Peláez",
   "license": "MIT",
   "version": "1.0.0",
-  "private": true,
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
