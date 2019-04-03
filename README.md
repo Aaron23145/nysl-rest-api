@@ -1,6 +1,6 @@
 # NYSL Rest API
 
-A Rest API built with Express that returns data about the NYSL games. [Try it live here](https://nysl-rest-api.herokuapp.com/). Used in the NYSL Web App to fetch data.
+A Rest API built with Express that returns data about the NYSL games. Try it live here: [NYSL Rest API on Heroku](https://nysl-rest-api.herokuapp.com/). Used in the [NYSL Web App](https://github.com/Aaron23145/nysl-web-app) to fetch data.
 
 ## Games Data
 
@@ -17,11 +17,18 @@ The data returned is an array of objects. Each entry has the following fields:
 
 ## Install
 
-To install it you will need Node and NPM (or yarn) installed locally and run the following comands:
+To install it you will need Node and NPM (or Yarn) installed locally and run the following comands:
 
 ```sh
 npm install
 npm start
+```
+
+or if you're using Yarn:
+
+```sh
+yarn
+yarn start
 ```
 
 Also you'll need to setup the following environment variables:
@@ -32,3 +39,7 @@ Also you'll need to setup the following environment variables:
 | NYSL_DB_PASSWORD | Password of the database |
 
 To change the database name or the collection name it has to be done in the code.
+
+## Deployment
+
+Just follow the install instructions. No additional configuration is required.
