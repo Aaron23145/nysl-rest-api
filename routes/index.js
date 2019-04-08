@@ -1,22 +1,23 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
 
-const { createClient } = require('../mongodb')
+const router = express.Router();
 
-router.get('/', function (req, res, next) {
-  const client = createClient()
+const { createClient } = require('../mongodb');
 
-  client.connect(err => {
-    if (err) throw new Error(err)
+router.get('/', (req, res) => {
+  const client = createClient();
 
-    const collection = client.db('main').collection('games')
-    collection.find({}).toArray(function (err, data) {
-      if (err) throw new Error(err)
+  client.connect((err) => {
+    if (err) throw new Error(err);
 
-      res.json(data)
-    })
-    client.close()
-  })
-})
+    const collection = client.db('main').collection('games');
+    collection.find({}).toArray((queryErr, data) => {
+      if (queryErr) throw new Error(queryErr);
 
-module.exports = router
+      res.json(data);
+    });
+    client.close();
+  });
+});
+
+module.exports = router;

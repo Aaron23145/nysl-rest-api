@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint-disable */
+
 const app = require('../app')
 const debug = require('debug')('rest-api:server')
 const http = require('http')
