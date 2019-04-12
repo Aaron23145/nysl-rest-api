@@ -4,7 +4,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 
-const indexRouter = require('./routes/index');
+const GameController = require('./routes/GameController');
+require('./db');
 
 const app = express();
 
@@ -15,6 +16,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
-app.use('/', indexRouter);
+app.use('/games', GameController);
 
 module.exports = app;
