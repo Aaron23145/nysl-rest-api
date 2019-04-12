@@ -5,6 +5,8 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const GameController = require('./routes/GameController');
+const AuthController = require('./routes/AuthController');
+const ChatController = require('./routes/ChatController');
 require('./db');
 
 const app = express();
@@ -17,5 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.use('/games', GameController);
+app.use('/auth', AuthController);
+app.use('/chat', ChatController);
 
 module.exports = app;
