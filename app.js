@@ -22,4 +22,17 @@ app.use('/games', GameController);
 app.use('/auth', AuthController);
 app.use('/chat', ChatController);
 
+app.all('*', (req, res) => {
+  res.status(404).send(`
+    404 Error. This endpoint doesn't exist.
+    <a
+      href="https://github.com/Aaron23145/nysl-rest-api#endpoints"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      Check the documentation<!--
+    --></a>.
+  `);
+});
+
 module.exports = app;

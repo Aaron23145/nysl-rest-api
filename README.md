@@ -2,18 +2,16 @@
 
 A Rest API built with Express that returns data about the NYSL games. Try it live here: [NYSL Rest API on Heroku](https://nysl-rest-api.herokuapp.com/). Used in the [NYSL Web App](https://github.com/Aaron23145/nysl-web-app) to fetch data.
 
-## Games Data
+## Endpoints
 
-The data returned is an array of objects. Each entry has the following fields:
-
-| Field | Meaning |
-| ----- | ------- |
-| _id | Unique ID. |
-| date | When the game will ocurr in MM/DD format. |
-| teams | An array of fields with the names of the teams that will participate. |
-| location | School name where the game will occur. |
-| preciseLocation | Exact direction where the game will ocurr. |
-| time | Moment when the game will occur. |
+| Endpoint kind | URL | Use | Params | Method |
+| ------------- | --- | --- | ------ | ------ |
+| Games | [/games](https://nysl-rest-api.herokuapp.com/games/) | Get all games information | None | GET |
+| Auth | [/auth/register](https://nysl-rest-api.herokuapp.com/auth/register/) | Register a new user specifying its username and password | name and password through body | POST |
+| Auth | [/auth/unregister](https://nysl-rest-api.herokuapp.com/auth/unregister/) | Delete an existing user specifying its username and password | name and password through body | POST |
+| Auth | [/auth/login](https://nysl-rest-api.herokuapp.com/auth/login/) | Login as an existing user specifying its username and password | name and password through body | POST |
+| Chat | [/chat](https://nysl-rest-api.herokuapp.com/chat/) | Get all messages sent in the chat. Required pass user token. | x-access-token as header | GET |
+| Chat | [/chat/send](https://nysl-rest-api.herokuapp.com/chat/send/) | Send a new message to the chat. Required pass user token and message content. | x-access-token as header and content as body | POST |
 
 ## Install
 
