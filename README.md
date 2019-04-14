@@ -4,7 +4,7 @@ A Rest API built with Express that returns data about the NYSL games. Try it liv
 
 ## Endpoints
 
-| Endpoint kind | URL | Use | Params | Method |
+| Kind | URL | Use | Params | Method |
 | ------------- | --- | --- | ------ | ------ |
 | Games | [/games](https://nysl-rest-api.herokuapp.com/games/) | Get all games information | None | GET |
 | Auth | [/auth/register](https://nysl-rest-api.herokuapp.com/auth/register/) | Register a new user specifying its username and password | name and password through body | POST |
